@@ -5,6 +5,15 @@ import quizData from "./quizData.js";
 import Timer from "./components/Timer.jsx";
 import StartGame from "./components/StartGame.jsx";
 
+// Function to shuffle an array
+// In this context, it is used for shuffling the question order
+const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
 
 function App() {
   const [username, setUsername] = useState(null);
@@ -13,9 +22,9 @@ function App() {
   const [moneyEarned, setMoneyEarned] = useState("$ 0");
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [correctCount, setCorrectCount] = useState(0);
+  const [shuffledData, setShuffledData] = useState(() => shuffleArray(quizData));
 
-
-  const data = quizData;
+  const data = shuffledData;
 
   const moneyPyramid = useMemo(
     () =>
@@ -45,6 +54,13 @@ function App() {
   }, [moneyPyramid, questionNumber]);
 
 
+  useEffect(()=>{
+    if (correctCount === 15){
+      setStop(true);
+    }
+  }, [correctCount]);
+
+
   const resetGame = () => {
     setUsername(null);
     setQuestionNumber(1);
@@ -52,6 +68,7 @@ function App() {
     setMoneyEarned("$ 0");
     setCorrectCount(0);
     setSelectedAnswer(null);
+    setShuffledData(shuffleArray(quizData));
   };
 
   return (
@@ -64,6 +81,10 @@ function App() {
             <>
             <div className="endGameContainer">
               <h1 className="endGameMessage"> You earned {moneyEarned}</h1>
+              {correctCount === 15 && (
+                <p className="celebrationText">Congratulations! You won one million dollar!</p>
+                )
+              }
               <button className="playAgain" onClick={resetGame}>Play Again</button>
             </div>
 
