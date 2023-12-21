@@ -1,38 +1,257 @@
-.App {
-  text-align: center;
+.app {
+    height: 100vh;
+    display: flex;
+    background-color: #020230; 
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.startGame {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .nameInput {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .nameInput:focus {
+    outline: none;
   }
+  
+  .startButton {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: cornflowerblue;
+  }
+
+  .startButton:hover {
+    background-color:goldenrod;
+  }
+
+
+.main {
+    width: 75%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #020230),
+    url("assets/app_bg.png") center;
+    display: flex;
+    flex-direction: column;
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.option {
+    width: 35%;
+    border: 2px solid aqua;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 25px;
+    background: linear-gradient(rgb(47, 0, 255),rgb(132, 0, 255), black);
+    margin: 0 20px 20px 0;  /* top right bottom left */
+    cursor: pointer;
+}
+
+
+.option:hover, .option.active {
+    background:goldenrod;
+}
+
+.option.correct {
+    animation-name: correct;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards; /* The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)*/
+}
+
+@keyframes correct {
+    0%, 22%, 42% {background: goldenrod;}
+    20%, 40%, 60% {background: linear-gradient(rgb(47, 0, 255),rgb(132, 0, 255), black);}
+    62%, 100% {background: green;}
+}
+
+.option.wrong {
+    animation-name: wrong;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards; /* The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)*/
+}
+
+@keyframes wrong {
+    0%, 22%, 42% {background: goldenrod;}
+    20%, 40%, 60% {background: linear-gradient(rgb(47, 0, 255),rgb(132, 0, 255), black);}
+    62%, 100% {background: crimson;}
+}
+
+
+.pyramid {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.rewardList {
+    list-style: none;
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.rewardListItem {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.rewardListItem.active {
+    background-color: teal;
+}
+
+.rewardListItemNumber {
+    font-size: 18px;
+    font-weight: 100;
+    width: 30%;
+}
+
+.rewardListItemAmount {
+    font-size: 20px;
+    font-weight: 500; 
+}
+
+
+.top {
+    height: 50%;
+    position: relative;
+}
+
+.username {
+    position: absolute;
+    right: 5px;
+    color:darkkhaki;
+    top: 15px;
+}
+
+.correctCount {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    font-weight: 600;
+    color:aqua;
+}
+
+.resetBtn {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    color:black;
+    background-color:khaki;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.resetBtn:hover {
+    background-color:orangered;
+}
+
+
+.bottom {
+    height: 50%;
+}
+
+
+.quiz {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.question {
+    background: linear-gradient(#021e41a5, black);
+    width: 80%;
+    border: 3px solid aquamarine;
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.timer {
+    width: 70px;
+    height: 70px;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10px;
+    left: 80px;
+}
+
+.endGameContainer {
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+    margin: auto;
+    align-items: center;
+}
+
+
+.endGameMessage {
+    font-weight: 800;
+    padding: 20px;
+}
+
+
+.playAgain {
+    border: 5px solid firebrick;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 200px;
+    padding: 20px;
+    background-color: coral;
+}
+
+.playAgain:hover {
+    background-color: crimson;
 }
