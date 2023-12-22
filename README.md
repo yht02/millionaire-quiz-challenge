@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Millionaire Quiz Challenge App Summary:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This quiz application is a React-based game that tests a player's knowledge through a series of multiple-choice questions about Malaysia. The game has several features:
 
-## Available Scripts
 
-In the project directory, you can run:
+## User Interaction:
 
-### `npm start`
+At the beginning, the player is prompted to enter their name using an input field.
+After entering the name, the game starts with a timer, and the player is presented with a series of questions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Game Mechanics:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Questions are presented one at a time, and the player must select the correct answer from multiple choices.
+A timer counts down for each question, adding a time constraint to each decision.
 
-### `npm test`
+## Feedback and Animation:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After selecting an answer, the chosen option is highlighted, and the application provides feedback with animation.
+Correct answers trigger a positive animation, while incorrect answers trigger a different animation.
 
-### `npm run build`
+## Score Tracking:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The player's progress is displayed through a pyramid structure, representing the monetary value of each correct answer.
+The game tracks the total number of correct answers, and the player earns money accordingly.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## End of Game:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The game concludes when the player answers all 15 questions or when they provide an incorrect answer.
+Upon completion, the player is informed of their earnings and, if all answers are correct, a celebration message is displayed.
 
-### `npm run eject`
+## Reset and Replay:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Players have the option to reset the game, allowing them to enter a new username and start over.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Styling and Animation:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application features an appealing and responsive design with animations for correct and incorrect answers.
+Stylish elements such as a gradient background, sound effects, and celebration messages enhance the overall user experience.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Code Structure:
 
-## Learn More
+The application is organized into modular components, making it easy to understand and maintain.
+The code uses React hooks, such as useState, useEffect, and useMemo, for managing state and effects.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
+## <ins>Assets Attribution</ins>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Background Music:
 
-### Code Splitting
+The background music and sound effects used in this project are sourced from pixabay.com. They are royalty-free.  return 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Quiz App Logo/Icon:
 
-### Analyzing the Bundle Size
+The quiz app logo used in this project is sourced from https://as2.ftcdn.net/v2/jpg/00/64/19/71/1000_F_64197195_bGtFNqSvL6wuSN3ppKNLmk3gi8Ba9Gwa.jpg.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Background Image:
 
-### Making a Progressive Web App
+The background image used in the project is a derivative of the 'Spreading colorful question mark on black wall 3d rendering' by 'Tae PY15MU'.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Original Image: https://www.freepik.com/premium-photo/spreading-colorful-question-mark-black-wall-3d-rendering_27877145.htm#page=4&query=quiz%20app%20background&position=40&from_view=search&track=ais&uuid=632fc5e4-7838-4c55-9009-0d5e0ca20198
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
