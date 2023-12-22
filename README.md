@@ -42,6 +42,11 @@ Stylish elements such as a gradient background, sound effects, and celebration m
 The application is organized into modular components, making it easy to understand and maintain.
 The code uses React hooks, such as useState, useEffect, and useMemo, for managing state and effects.
 
+## Deployment:
+
+The application is deployed and hosted on https://yht02.github.io/millionaire-quiz-challenge
+<br>Everyone can feel free to play it 😄
+
 ---
 ## <ins>Assets Attribution</ins>
 
@@ -58,6 +63,28 @@ The quiz app logo used in this project is sourced from https://as2.ftcdn.net/v2/
 The background image used in the project is a derivative of the 'Spreading colorful question mark on black wall 3d rendering' by 'Tae PY15MU'.
 
 - Original Image: https://www.freepik.com/premium-photo/spreading-colorful-question-mark-black-wall-3d-rendering_27877145.htm#page=4&query=quiz%20app%20background&position=40&from_view=search&track=ais&uuid=632fc5e4-7838-4c55-9009-0d5e0ca20198
+
+---
+### Disclaimer:
+
+This quiz app is designed for entertainment purposes only, and any rewards or amounts mentioned within the App are purely virtual and not redeemable for real-world currency or prizes. By participating in the quiz, you acknowledge and agree to the following:
+
+1. **Virtual Rewards:** Any amounts or rewards displayed in the App, including but not limited to virtual money earned, are fictional and have no monetary value.
+
+2. **No Real Money Prizes:** The App does not offer or provide any real money prizes or rewards. It is not a gambling platform, and there is no opportunity to win actual currency.
+
+3. **Educational and Entertainment:** The questions and content in the App are meant for educational and entertainment purposes. The App is not a gambling platform, and there is no opportunity to win actual currency.
+
+4. **No Cash Redemption:** Any virtual currency or rewards earned within the App cannot be redeemed for cash or any tangible items.
+
+5. **Not a Financial Tool:** The App is not a financial tool or investment platform, and any references to money or rewards are part of the game's fictional context.
+
+By using the App, you agree that any perceived rewards or earnings are fictional, and the App is not responsible for any misunderstanding or misconceptions regarding the nature of the rewards.
+
+Please enjoy the App responsibly, and remember that it is designed purely for entertainment purposes.
+
+
+[Last Edited Date: 22 Dec 2023]
 
 
 
